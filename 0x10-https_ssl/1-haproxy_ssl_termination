@@ -40,11 +40,11 @@ frontend  ehoneah-frontend-http
         default_backend ehoneah-backend
 
 frontend ehoneah-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.onoja5.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend ehoneah-backend
+	default_backend onoja5-backend
 
 backend ehoneah-backend
         balance roundrobin
-        server 63210-web-01 100.25.19.204:80 check
-        server 63210-web-02 54.157.159.85:80 check
+        server 137685-web-01 18.235.233.168:80 check
+        server 137685-web-02 18.234.169.5:80 check
